@@ -1,0 +1,20 @@
+{%extends "base.html" %}
+{% block body %}
+<div class="container">
+
+    {% for x in response_json.articles %}
+    <div class="col-sm">
+        <div class="card" style="width: 60rem;">
+            <img src="{{x.urlToImage}}" class="card-img-top" alt="{{x.source.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{x.title}}</h5>
+                <p class="card-text">{{x.description}} <br> {{x.content}}</p>
+                <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
+
