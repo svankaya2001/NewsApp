@@ -76,10 +76,15 @@ WSGI_APPLICATION = 'newsApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dfmrm82nusir3e',
+        'HOST': 'ec2-52-204-232-46.compute-1.amazonaws.com',
+        'PORT': '5432',
+        'USER': 'ctcrokhruftgwe',
+        'PASSWORD': '42d05dc366de68cd89613c3a411c0e7ab2633004081999efd584616752d622e4'
     }
 }
+
 
 
 # Password validation
